@@ -9,6 +9,9 @@ Author URL: http://w3layouts.com
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
+ 
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -52,6 +55,8 @@ body {
   color: #000;
 }
 
+
+
 header {
   background-color: #fff;
   padding: 20px 0;
@@ -67,6 +72,8 @@ header {
 }
 
 /* Header styles */
+/* General styles */
+/* General styles */
 /* General styles */
 .navbar {
   display: flex;
@@ -157,6 +164,10 @@ nav ul li a:hover {
     padding: 10px;
   }
 
+  .nav-links {
+    width: 100%; /* Ensure nav-links take full width */
+  }
+
   .nav-links ul {
     flex-direction: column;
     align-items: flex-start;
@@ -170,6 +181,21 @@ nav ul li a:hover {
   .nav-icons {
     margin-top: 10px;
   }
+
+  /* Adjusting font size for better visibility on smaller screens */
+  .nav-links ul li a {
+    font-size: 16px;
+  }
+}
+/* Your existing CSS styles */
+
+/* Additional styles for collapsible menu */
+.menu {
+  display: none;
+}
+
+.menu.open {
+  display: block;
 }
 
 
@@ -604,11 +630,28 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
+  .testimonials1 {
+    background-color: #f5f5f5; /* Background color */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center align text */
+    font-family: Arial, sans-serif; /* Font family */
+  }
+  
+  .testimonials1 p {
+    color: #333; /* Text color */
+    font-size: 18px; /* Font size */
+    line-height: 1.5; /* Line height */
+    margin: 0; /* Remove default margin */
+  }
+  
+
+
 .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
+  max-width: 550px;
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
@@ -666,6 +709,45 @@ pre {
     #w3l-forms-9 h1 {
       text-align: center;
     }
+
+
+
+    
+    /* CSS for the newsletter section */
+.w3l-forms-9 {
+  text-align: center; /* Center align the content */
+}
+
+.w3l-forms-9 .rightside-form {
+  display: flex;
+  justify-content: center;
+}
+
+.w3l-forms-9 input[type="email"] {
+  width: 70%; /* Adjust the width of the input box as needed */
+  padding: 10px;
+  margin-right: 10px; /* Add some space between input and button */
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Add border for better visibility */
+}
+
+.w3l-forms-9 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* Button text color */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.w3l-forms-9 button:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
+
+
+
     
 .row {
   display: flex;
@@ -3250,7 +3332,7 @@ input[type="button"].btn-block {
   display: block; }
 
 .navbar {
-  position: relative;
+  
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -10175,6 +10257,8 @@ header.nav-fixed {
   left: 49%;
   z-index: 1001; }
 
+  
+
 .w3l-header-4 .absolute-top {
   padding: 20px 0px;
   background: var(--bg-color);
@@ -10288,8 +10372,10 @@ button.navbar-toggler.collapsed .icon-expand {
   background-size: cover;
   z-index: 0;
   position: relative;
-  margin-top: 95px; }
+  margin-top: 40px; }
 
+
+  
 .w3l-banner:before {
   content: "";
   background: rgba(0, 0, 0, 0.5);
@@ -10315,12 +10401,14 @@ button.navbar-toggler.collapsed .icon-expand {
   border-radius: var(--border-radius);
   max-width: 400px;
   margin-left: auto;
-  border: 1px solid var(--border-color); }
+  border: 1px solid var(--border-color);
+  text-align: center; /* Align contents to center */
+}
 
 .banner-form-w3 h5 {
   font-size: 28px;
   font-weight: 600;
-  text-align: center; }
+}
 
 .form-style-w3ls input[type="text"],
 .form-style-w3ls input[type="email"],
@@ -10335,32 +10423,50 @@ select {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 15px;
-  border-radius: var(--border-radius); }
+  border-radius: var(--border-radius);
+  text-align: center; /* Align input text to center */
+}
+
+.form-style-w3ls button {
+  text-align: center; /* Align button to center */
+}
 
 @media (max-width: 1080px) {
   .w3l-banner h3 {
     font-size: 40px;
-    line-height: 50px; } }
+    line-height: 50px;
+  }
+}
 
 @media (max-width: 991px) {
   .w3l-banner {
-    margin-top: 80px; }
+    margin-top: 80px;
+  }
   .banner-form-w3 {
-    margin-left: 0px; } }
+    margin-left: 0px;
+  }
+}
 
 @media (max-width: 415px) {
   .w3l-banner h3 {
     font-size: 35px;
-    line-height: 45px; }
+    line-height: 45px;
+  }
   .banner-form-w3 {
-    padding: 2em; }
+    padding: 2em;
+  }
   .banner-form-w3 h5 {
-    font-size: 24px; } }
+    font-size: 24px;
+  }
+}
 
 @media (max-width: 384px) {
   .w3l-banner h3 {
     font-size: 30px;
-    line-height: 40px; } }
+    line-height: 40px;
+  }
+}
+
 
 /*--  call us --*/
 .w3l-call h2 {
@@ -10401,94 +10507,85 @@ select {
 .w3l-aboutblock ul.w3l-right-book li span {
   font-size: 12px;
   margin-right: 10px;
-  opacity: 0.4; }
+  opacity: 0.4;
+}
 
 .w3l-aboutblock .play-view {
-  left: 0;
-  right: 0;
-  top: calc(50% - 40px); }
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.w3l-aboutblock {
+  position: relative;
+}
 
-  .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff; /* Adjust color as needed */
-    z-index: 1; /* Ensure the text is above the image */
-  }
-/* Centering the paragraph */
-
-
-
-
-
-
-  .para1 {
-    margin-bottom: 10px; /* Add some space below the paragraph */
-    color: #fff; /* Set paragraph text color */
-    font-size: 100px; /* Set paragraph font size */
-  }
-  
-  .para2 {
-    display: block; /* Make the span a block-level element */
-    color: #ff0000; /* Set span text color to red */
-    font-weight: bold; /* Make the span text bold */
-    font-size: 18px; /* Set span font size */
-  }
-  
-  .text-overlay p {
-    font-size: 30px; /* Adjust font size as needed */
-    margin-bottom: 270px; /* Remove default margin */
-  }
-  
-  .video-play-icon {
-    background: var(--primary-color);
-    color: #fff;
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 50%;
-  }
-
-  
-
-.w3l-aboutblock span.video-play-icon {
-  background: var(--primary-color);
+.text-overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   color: #fff;
-  display: inline-block;
-  padding-left: 5px;
-  width: 80px;
-  height: 84px;
-  line-height: 65px;
+  z-index: 2;
+}
+
+.para1 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.para2 {
+  display: block;
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.video-play-icon {
+  background: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
   border-radius: 50%;
-  transition: 0.3s ease-in-out;
-  -webkit-animation: ripple 1s linear infinite;
-  animation: ripple 1s linear infinite; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 350%);
+  z-index: 3;
+  border: 2px solid #fff; /* Add white border */
+}
 
-.w3l-aboutblock span.video-play-icon:hover {
-  transform: scale(1.1);
-  transition: 0.3s ease-in-out; }
 
-  .w3l-aboutblock .left-wthree-img {
-    text-align: center; /* Center align the content */
-  }
-  
-  .w3l-aboutblock img {
-    border-radius: 10px;
-    display: inline-block; /* Ensure image behaves like an inline-block element */
-    max-width: 100%; /* Ensure image doesn't exceed container width */
-  }
-  
-  
-  
+
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.w3l-aboutblock .left-wthree-img {
+  text-align: center;
+}
+
+.w3l-aboutblock img {
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 100%;
+}
 
 ol.w3l-right li {
   font-size: 18px;
   line-height: 28px;
   color: var(--heading-color);
   margin-top: 5px;
-  position: relative; }
+  position: relative;
+}
 
 ol.w3l-right li:before {
   content: "";
@@ -10499,19 +10596,29 @@ ol.w3l-right li:before {
   position: absolute;
   top: 11px;
   left: -20px;
-  border: 1px solid var(--primary-color); }
+  border: 1px solid var(--primary-color);
+}
 
+/* Remove animation */
 @-webkit-keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(217, 38, 38, 0.15), 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15); }
+    box-shadow: 0 0 0 0 rgba(217, 38, 38, 0.15), 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15);
+  }
   100% {
-    box-shadow: 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15), 0 0 0 40px rgba(217, 38, 38, 0); } }
+    box-shadow: 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15), 0 0 0 40px rgba(217, 38, 38, 0);
+  }
+}
 
 @keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(217, 38, 38, 0.15), 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15); }
+    box-shadow: 0 0 0 0 rgba(217, 38, 38, 0.15), 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15);
+  }
   100% {
-    box-shadow: 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15), 0 0 0 40px rgba(217, 38, 38, 0); } }
+    box-shadow: 0 0 0 10px rgba(217, 38, 38, 0.15), 0 0 0 20px rgba(217, 38, 38, 0.15), 0 0 0 40px rgba(217, 38, 38, 0);
+  }
+}
+
+/* Additional styles for responsiveness or other elements can be added below */
 
 /*-- //video popup --*/
 /*-- testimonials --*/
@@ -10699,6 +10806,38 @@ ol.w3l-right li:before {
   
   
 
+  .testimonials {
+    position: relative;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+@media only screen and (max-width: 767px) {
+  section.testimonials .arrow-right,
+  section.testimonials .arrow-left {
+      display: none;
+  }
+}
+
+
+
+
+
+
+
   .w3l-forms-9 {
     display: flex;
     flex-direction: column;
@@ -10813,86 +10952,92 @@ ol.w3l-right li:before {
 .w3l-bottom-grids-6 {
   background: var(--bg-grey);
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+}
 
-.w3l-bottom-grids-6 .area-box {
-  padding: 50px 40px;
+.w3l-bottom-grids-6 .grids-area-hny {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w3l-bottom-grids-6 .grids-feature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.w3l-bottom-grids-6 .area-box,
+.w3l-bottom-grids-6 .area-box1,
+.w3l-bottom-grids-6 .area-box2 {
   position: relative;
   z-index: 1;
   border-radius: 8px;
   box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.03);
   background-color: var(--bg-color);
-  text-align: center; }
-
-.w3l-bottom-grids-6 .area-box-feature {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  grid-gap: 25px; }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjusted */
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .w3l-bottom-grids-6 .area-box:hover {
   transition: .3s;
-  box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.1);
+}
 
-  .area-box {
-    background-image: url('../images/service-img1.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* Ensure the background image covers the entire div */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    padding: 20px; /* Add padding to the box if needed */
-  }
-  .area-box1 {
-    background-image: url('../images/service-img2.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* Ensure the background image covers the entire div */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    padding: 20px; /* Add padding to the box if needed */
-  }
-  .area-box2 {
-    background-image: url('../images/service-img3.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* Ensure the background image covers the entire div */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    padding: 20px; /* Add padding to the box if needed */
-  }
+.area-box {
+  background-image: url('../images/service-img1.jpg');
+}
 
+.area-box1 {
+  background-image: url('../images/service-img2.jpg');
+}
 
-  .grids-feature {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .area-box,
-  .area-box1,
-  .area-box2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Ensure all boxes take up the full height of their parent */
-  }
-  
-  .area-box h4,
-  .area-box1 h4,
-  .area-box2 h4,
-  .area-box p,
-  .area-box1 p,
-  .area-box2 p,
-  .area-box .more,
-  .area-box1 .more,
-  .area-box2 .more {
-    margin: 0; /* Remove default margin */
-  }
-  
-  .area-box h4,
-  .area-box1 h4,
-  .area-box2 h4 {
-    margin-bottom: 10px; /* Adjust spacing between heading and paragraph */
-  }
-  
-  .area-box .car,
-  .area-box1 .car,
-  .area-box2 .car {
-    flex-shrink: 0; /* Prevent the car icon from shrinking */
-  }
+.area-box2 {
+  background-image: url('../images/service-img3.jpg');
+}
+
+.area-box,
+.area-box1,
+.area-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure all boxes take up the full height of their parent */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  padding: 20px; /* Add padding to the box if needed */
+}
+
+.area-box h4,
+.area-box1 h4,
+.area-box2 h4,
+.area-box p,
+.area-box1 p,
+.area-box2 p,
+.area-box .more,
+.area-box1 .more,
+.area-box2 .more {
+  margin: 0; /* Remove default margin */
+}
+
+.area-box h4,
+.area-box1 h4,
+.area-box2 h4 {
+  margin-bottom: 10px; /* Adjust spacing between heading and paragraph */
+}
+
+.area-box .car,
+.area-box1 .car,
+.area-box2 .car {
+  flex-shrink: 0; /* Prevent the car icon from shrinking */
+}
+
   
 
   .testimonials {
